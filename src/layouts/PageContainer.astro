@@ -1,0 +1,165 @@
+---
+import {styled, ThemeProvider} from "@qinetik/emotion";
+import {ColorScheme, getSystemColorScheme, onSystemColorSchemeChange} from "@qinetik/anique";
+import {Column} from "@qinetik/anique";
+import {AppBar} from "@qinetik/anique";
+import {IconButton} from "@qinetik/anique";
+import {DrawerItem, DrawerSectionItem, StaticDrawer} from "@qinetik/anique";
+import {createEffect, createSignal, JSX} from "solid-js";
+import MenuIcon from "../solid/icons/Menu"
+import LightDarkIcon from "../solid/icons/LightDarkIcon";
+import {Row} from "@qinetik/anique";
+import {Size} from "@qinetik/anique";
+import {AniqueThemeDark, AniqueThemeLight} from "@qinetik/anique";
+import HTMLContainer from "./HTMLContainer.astro";
+import {AutoSystemColorScheme} from "../solid/components/AutoSystemColorScheme";
+import {WebAppBar} from "../solid/components/AppBar";
+import {ScrollbarStyles} from "@qinetik/anique";
+import AnchorDrawerItem from "../solid/components/AnchorDrawerItem";
+
+const path = Astro.url.pathname
+let base = import.meta.env.BASE_URL || ""
+
+---
+
+<HTMLContainer
+    initialTheme="dark"
+    title="Anique"
+>
+
+    <AutoSystemColorScheme
+        client:load
+    />
+
+    <Column>
+
+        <WebAppBar
+            client:load
+        />
+
+        <Row class="bar-content-row">
+
+            <StaticDrawer
+                class="static-drawer"
+            >
+
+                <div class="fixed-content">
+
+                    <AnchorDrawerItem href={base + "/"} current={path}>
+                        Home
+                    </AnchorDrawerItem>
+
+                    <DrawerSectionItem title={"Input"}/>
+                    <AnchorDrawerItem href={`${base}/components/textfield`} current={path}>
+                        TextField
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/fab"} current={path}>
+                        Floating Action Button
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/button"} current={path}>
+                        Button
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/icon-button"} current={path}>
+                        IconButton
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/checkbox"} current={path}>
+                        Checkbox
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/radio"} current={path}>
+                        Radio
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/slider"} current={path}>
+                        Slider
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/native-select"} current={path}>
+                        Native Select
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/select"} current={path}>
+                        Select
+                    </AnchorDrawerItem>
+
+                    <DrawerSectionItem title={"Layout"}/>
+                    <AnchorDrawerItem href={base + "/components/column"} current={path}>
+                        Column
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/row"} current={path}>
+                        Row
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/dialog"} current={path}>
+                        Dialog
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/appbar"} current={path}>
+                        AppBar
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/drawer"} current={path}>
+                        Drawer
+                    </AnchorDrawerItem>
+
+                    <DrawerSectionItem title={"Text"}/>
+                    <AnchorDrawerItem href={base + "/components/text"} current={path}>
+                        Native Text
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/headline"} current={path}>
+                        Headline
+                    </AnchorDrawerItem>
+
+                    <DrawerSectionItem title={"Feedback"}/>
+                    <AnchorDrawerItem href={base + "/components/alert"} current={path}>
+                        Alert
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/components/spinner"} current={path}>
+                        Spinner
+                    </AnchorDrawerItem>
+
+                </div>
+
+            </StaticDrawer>
+
+            <div class="content-container">
+                <div class="container">
+                    <slot/>
+                </div>
+            </div>
+        </Row>
+
+    </Column>
+
+</HTMLContainer>
+
+
+<style>
+    .content-container {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        justify-items: start;
+        align-items: center;
+        flex: 1;
+        box-sizing: border-box;
+        padding: 4rem 4rem;
+    }
+
+    .bar-content-row {
+        display: table;
+    }
+
+    .static-drawer {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .static-drawer a {
+        text-decoration: none;
+    }
+
+    .fixed-content {
+        position: sticky;
+        top: 1em;
+    }
+
+</style>
