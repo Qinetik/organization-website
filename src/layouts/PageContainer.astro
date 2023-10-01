@@ -19,6 +19,7 @@ import AnchorDrawerItem from "../solid/components/AnchorDrawerItem";
 
 const path = Astro.url.pathname
 let base = import.meta.env.BASE_URL || ""
+base = base === "/" ? "" : base
 
 ---
 
@@ -49,66 +50,9 @@ let base = import.meta.env.BASE_URL || ""
                         Home
                     </AnchorDrawerItem>
 
-                    <DrawerSectionItem title={"Input"}/>
-                    <AnchorDrawerItem href={`${base}/components/textfield`} current={path}>
-                        TextField
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/fab"} current={path}>
-                        Floating Action Button
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/button"} current={path}>
-                        Button
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/icon-button"} current={path}>
-                        IconButton
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/checkbox"} current={path}>
-                        Checkbox
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/radio"} current={path}>
-                        Radio
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/slider"} current={path}>
-                        Slider
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/native-select"} current={path}>
-                        Native Select
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/select"} current={path}>
-                        Select
-                    </AnchorDrawerItem>
-
-                    <DrawerSectionItem title={"Layout"}/>
-                    <AnchorDrawerItem href={base + "/components/column"} current={path}>
-                        Column
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/row"} current={path}>
-                        Row
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/dialog"} current={path}>
-                        Dialog
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/appbar"} current={path}>
-                        AppBar
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/drawer"} current={path}>
-                        Drawer
-                    </AnchorDrawerItem>
-
-                    <DrawerSectionItem title={"Text"}/>
-                    <AnchorDrawerItem href={base + "/components/text"} current={path}>
-                        Native Text
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/headline"} current={path}>
-                        Headline
-                    </AnchorDrawerItem>
-
-                    <DrawerSectionItem title={"Feedback"}/>
-                    <AnchorDrawerItem href={base + "/components/alert"} current={path}>
-                        Alert
-                    </AnchorDrawerItem>
-                    <AnchorDrawerItem href={base + "/components/spinner"} current={path}>
-                        Spinner
+                    <DrawerSectionItem title={"Other"}/>
+                    <AnchorDrawerItem href={`${base}/about`} current={path}>
+                        About
                     </AnchorDrawerItem>
 
                 </div>

@@ -27,10 +27,7 @@ export default defineConfig({
         // use assets dir name if you are deploying to GitHub pages
         // which eliminates directory names like _astro
         assets : "assets"
-    },
-    ssr: {
-        noExternal: ['@motionone/solid', '@solid-primitives/props'],
-    },
+    }
 });
 
 function integratePaths(config) {

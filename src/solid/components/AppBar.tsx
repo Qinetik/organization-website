@@ -1,4 +1,4 @@
-import {IconButton} from "@qinetik/anique";
+import {IconButton, Spacer} from "@qinetik/anique";
 import MenuIcon from "../icons/Menu";
 import {Row} from "@qinetik/anique";
 import {ThemeSwitcher} from "./ThemeSwitcher";
@@ -8,11 +8,7 @@ export function WebAppBar(props : { title ?: string }) {
     return (
         <AppBar
             navIcon={
-                <IconButton onClick={() => {
-                    // TODO
-                }}>
-                    <MenuIcon/>
-                </IconButton>
+                <Spacer width={"1em"} />
             }
             title={props.title || "Anique"}
             actions={(
