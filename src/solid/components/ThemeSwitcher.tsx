@@ -22,7 +22,6 @@ export function ThemeSwitcher() {
                 }
                 document.documentElement.className = next
             }}
-            size={Size.Medium}
         >
             <LightDarkIcon/>
         </IconButton>

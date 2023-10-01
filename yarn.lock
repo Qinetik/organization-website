@@ -961,7 +961,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@qinetik/anique-icons@npm:>=1.0.3":
+"@qinetik/anique-icons@npm:1.0.3":
   version: 1.0.3
   resolution: "@qinetik/anique-icons@npm:1.0.3"
   peerDependencies:
@@ -970,15 +970,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@qinetik/anique@npm:^1.0.18":
-  version: 1.0.18
-  resolution: "@qinetik/anique@npm:1.0.18"
+"@qinetik/anique@npm:^1.0.19":
+  version: 1.0.19
+  resolution: "@qinetik/anique@npm:1.0.19"
   dependencies:
-    "@qinetik/anique-icons": ">=1.0.3"
+    "@qinetik/anique-icons": 1.0.3
   peerDependencies:
-    "@qinetik/emotion": ">=2.0.16"
+    "@qinetik/emotion": 2.0.16
     solid-js: ^1.7.11
-  checksum: 5c6bc16b9a31b7b346e97f5fcf8fd4f8fc9cfd4c67c19a00435545dbbc4c13c6d107ffc9baad8e5cbfa6c69bf349186ce400ff51c749a6838d68db4e51b48461
+  checksum: ec82e1fc729416e4801a8eb1b73da2688ae2c4f86221f6f009d5ec0a64d15944bbccf4348ce06dd217fef70545a7c0b00fb668e6475c0bb1279b759a86db75b7
   languageName: node
   linkType: hard
 
@@ -4417,7 +4417,7 @@ __metadata:
   resolution: "qinetik-anique@workspace:."
   dependencies:
     "@astrojs/solid-js": ^3.0.1
-    "@qinetik/anique": ^1.0.18
+    "@qinetik/anique": ^1.0.19
     "@qinetik/emotion": 2.0.16
     astro: ^3.1.4
     gh-pages: ^6.0.0
