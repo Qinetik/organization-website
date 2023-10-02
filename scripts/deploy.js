@@ -2,7 +2,7 @@ import ghPages from "gh-pages"
 
 ghPages.publish('dist', {
     branch: 'gh-pages',
-    repo: 'https://github.com/Qinetik/anique.git'
+    repo: 'https://github.com/Qinetik/qinetik.github.io.git'
 }, (err) => {
     if(err != null){
         console.error(err)
