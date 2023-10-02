@@ -27,7 +27,7 @@ export default function Footer() {
                     <QinetikLogoLight class={"display-in-dark"}/>
                 </div>
                 <p>
-                    <a href="/terms">Terms of use</a> | <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms of services</a> | <a href="/privacy">Privacy</a>
                 </p>
                 <p>
                     Copyright &copy; Qinetik 2023
