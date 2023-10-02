@@ -137,17 +137,15 @@ export default function Home() {
                                 title={"Our Services"}
                                 showIcon={true}
                             ><Para>
-                                We specialize in creating apps that no one wants to use. But hey, if you're looking for
-                                a
-                                to-do list app or a sketching app, we've got you covered.
+                                We specialize in creating apps. if you're looking for
+                                a to-do list app or a sketching app, we've got you covered.
                             </Para></Accordion>
                             <Accordion
                                 title={"Our Process"}
                                 showIcon={true}
                             ><Para>
                                 It's simple really. We come up with an idea, spend a ton of money and time developing
-                                it,
-                                and then release it to the world where it is promptly ignored. Rinse and repeat.
+                                it, and then release it to the world where it is promptly ignored. Rinse and repeat.
                             </Para></Accordion>
                         </Column>
                     </Row>
