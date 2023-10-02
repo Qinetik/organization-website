@@ -24,8 +24,7 @@ const CenteredColumn = styled(Column)`
 const HeroSection = styled("div")`
   width: 100%;
   height: 35em;
-  background: ${Anique.colors.primary500};
-  padding: 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   box-sizing: border-box;
 `
 
@@ -45,7 +44,7 @@ const MainField = styled(BaseTextField)`
 `
 
 const Para = styled("p")`
-  line-height: 2rem;
+ 
 
 `
 
@@ -69,7 +68,7 @@ export default function Home() {
                     </Row>
                 </Column>
             </HeroSection>
-            <Spacer height={"3em"}/>
+            <Spacer height={"2em"}/>
             <CenteredColumn>
                 <CenteredColumn gap={"4rem"} style={{padding: "0 6rem"}}>
                     <CenteredColumn>
@@ -159,7 +158,7 @@ export default function Home() {
                         <Column gap={"1em"}
                                 style={{"margin-top": "3em", width: "calc(100% - 620px)", "min-height": "720px", "flex": 1}}>
                             <h1>Simplify Your Workflow with Qinetik's App Solutions</h1>
-                            <Para>At Qawaz, we understand the importance of working smartly and efficiently. That's why
+                            <Para>At Qinetik, we understand the importance of working smartly and efficiently. That's why
                                 we offer a wide range of apps to help simplify your workflow. From note-taking and to-do
                                 lists to file sharing and project management, our apps are designed to help you work
                                 smarter, not harder.</Para>
@@ -231,21 +230,21 @@ export default function Home() {
                     <Row gap={"4rem"}>
 
                         <ServiceColumn
-                            serviceSrc={"1.png"}
+                            serviceSrc={"4.png"}
                             iconAlt={"individual icon"}
                             heading={"Customizable Interface"}
                             description={"Our apps are designed to be flexible and customizable. Tailor them to your specific needs and preferences."}
                         />
 
                         <ServiceColumn
-                            serviceSrc={"2.png"}
+                            serviceSrc={"5.png"}
                             iconAlt={"teams icon"}
                             heading={"24/7 Support"}
                             description={`We are here to help. Our dedicated support team is available 24/7 to answer any questions and provide assistance.`}
                         />
 
                         <ServiceColumn
-                            serviceSrc={"3.png"}
+                            serviceSrc={"6.png"}
                             iconAlt={"companies icon"}
                             heading={"Cross-Platform Compatibility"}
                             description={`Our apps are designed to work seamlessly across multiple platforms, including iOS, Android, and web.`}
@@ -341,7 +340,7 @@ function Service(props: ServiceProps) {
 function ServiceColumn(props: ServiceProps) {
     return (
         <CenteredColumn gap={"1em"} style={{ color : Anique.colors.bg100 }}>
-            <img src={`/assets/services/${props.serviceSrc}`} alt={props.iconAlt} style={{"padding-top": "0.5em" }}/>
+            <img src={`/assets/icons/${props.serviceSrc}`} alt={props.iconAlt} style={{"padding-top": "0.5em" }}/>
             <h3 style={{"margin-top": "0", "margin-bottom": 0}}>{props.heading}</h3>
             <p style={{"margin-top": "0em", "text-align": "center"}}>{props.description}</p>
         </CenteredColumn>
