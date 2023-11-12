@@ -1,24 +1,26 @@
-import {Anique, Column, Headline, Size} from "@qinetik/anique";
+import {Anique, Headline, Size} from "@qinetik/anique";
 import {styled} from "@qinetik/emotion";
-import WindowsIcon from "../icons/timeline/WindowsIcon.tsx";
-import WebIcon from "../icons/timeline/WebIcon.tsx";
-import GooglePlayIcon from "../icons/timeline/GooglePlayIcon.tsx";
-import LightDarkIcon from "../icons/LightDarkIcon.tsx";
-import SyncCircle from "../icons/timeline/SyncCircle.tsx";
-import CloudSyncIcon from "../icons/timeline/CloudSyncIcon.tsx";
+import WindowsIcon from "../../../solid/icons/timeline/WindowsIcon";
+import WebIcon from "../../../solid/icons/timeline/WebIcon";
+import GooglePlayIcon from "../../../solid/icons/timeline/GooglePlayIcon";
+import LightDarkIcon from "../../../solid/icons/LightDarkIcon";
+import SyncCircle from "../../../solid/icons/timeline/SyncCircle";
+import CloudSyncIcon from "../../../solid/icons/timeline/CloudSyncIcon";
+import {PageContainer} from "~/solid/components/PageContainer";
 
 export default function TimelinePage() {
 
     const theme = Anique
 
     return (
-        <div>
+        <PageContainer>
             <MainContainer>
                 <MainSlide>
-                    <Headline size={Size.Large} style={{color: theme.colors.onBg, "text-align" : "center", "margin-top" : "-1em"}}>
+                    <Headline size={Size.Large}
+                              style={{color: theme.colors.onBg, "text-align": "center", "margin-top": "-1em"}}>
                         Meet <span style={{background: theme.colors.accent}}>T</span>imeline
                     </Headline>
-                    <Headline style={{color: theme.colors.onBg, "text-align" : "center", "margin-top" : "0"}}>
+                    <Headline style={{color: theme.colors.onBg, "text-align": "center", "margin-top": "0"}}>
                         A Note Taking Tool
                     </Headline>
                     <MainDemoContainer>
@@ -37,7 +39,7 @@ export default function TimelinePage() {
                 <AvailableSection/>
                 <div style={{height: "2em"}}/>
             </ContentContainer>
-        </div>
+        </PageContainer>
     )
 }
 
@@ -166,7 +168,7 @@ const AvailableSection = () => {
                 </CustomMainButton>
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.wakaztahir.timeline"
-                  style={{"text-decoration": "none"}} target={"_blank"}>
+               style={{"text-decoration": "none"}} target={"_blank"}>
                 <CustomMainButton style={{width: "270px"}}>
                     <GooglePlayIcon/>
                     <span style={{
@@ -179,7 +181,7 @@ const AvailableSection = () => {
                 </CustomMainButton>
             </a>
             <a href="https://github.com/codeckle/timeline-kmp/releases/download/1.0.19/Timeline-1.0.19.msi"
-                  style={{"text-decoration": "none"}} target={"_blank"}>
+               style={{"text-decoration": "none"}} target={"_blank"}>
                 <CustomMainButton style={{width: "270px"}}>
                     <WindowsIcon/>
                     <span style={{
@@ -199,12 +201,12 @@ const DemoSectionOne = () => {
     return (
         <DemoContainer>
             <DemoText>
-                <h3 style={{ "text-align":"center" }}>
+                <h3 style={{"text-align": "center"}}>
                     Sketch Out <br/>
                     Your Thoughts
                 </h3>
                 <br/>
-                <p style={{ "text-align":"center" }}>
+                <p style={{"text-align": "center"}}>
                     Timeline provides most features required to draw out multiple
                     images into one note , that can be shared & exported. <br/>
                     Features like undo , redo , background color change , pointer color ,
@@ -234,12 +236,12 @@ const DemoSectionTwo = styled((props) => {
                 />
             </DemoImage>
             <DemoText>
-                <h3 style={{ "text-align" : "center" }}>
+                <h3 style={{"text-align": "center"}}>
                     Intuitive <br/>
                     Easy To Understand
                 </h3>
                 <br/>
-                <p style={{ "text-align": "center" }}>
+                <p style={{"text-align": "center"}}>
                     Timeline makes it easy to access the items you need.
                     Everything will feel under your control.<br/>
                     It will save you a low of time to do everything else and
@@ -257,60 +259,61 @@ const DemoSectionTwo = styled((props) => {
 `
 
 export const FeatureBox = styled("div")`
-  width: 12em;
-  height: 2em;
-  border-radius: 1.5em;
-  padding : 1em;
-  margin : 1em;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-  border : 2px solid ${Anique.colors.primary}; 
+    width: 12em;
+    height: 2em;
+    border-radius: 1.5em;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid ${Anique.colors.primary};
 `
 
 export const FeatureText = styled("span")`
-  font-family: 'Roboto', 'sans-serif';
-  padding-left : 1em;
-  color : ${Anique.colors.primary};
+    font-family: 'Roboto', 'sans-serif';
+    padding-left: 1em;
+    color: ${Anique.colors.primary};
 `
 
 export const CustomMainButton = styled("button")`
-  border-radius:1.5em;
-  height:3.6em;
-  text-align:center;
-  text-decoration:none;
-  opacity:0.9;
-  padding:2em;
-  border:0;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  cursor:pointer;
-  margin:0.5em;
-  background : ${Anique.colors.primary};
-  &:hover{
-    opacity:1;
-  }
+    border-radius: 1.5em;
+    height: 3.6em;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0.9;
+    padding: 2em;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 0.5em;
+    background: ${Anique.colors.primary};
+
+    &:hover {
+        opacity: 1;
+    }
 `
 
 export const DemoContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  padding: 1em 4em;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 4em;
+    justify-content: center;
+    align-items: center;
 
-  ${Anique.breakpoints.up("sm")} {
-    flex-direction: row;
-  }
+    ${Anique.breakpoints.up("sm")} {
+        flex-direction: row;
+    }
 `
 
 export const DemoText = styled("div")`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 export const DemoImage = styled("div")`

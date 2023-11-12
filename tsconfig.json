@@ -1,7 +1,10 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js",
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   }
 }

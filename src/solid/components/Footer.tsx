@@ -1,7 +1,7 @@
-import {QinetikLogoDark, QinetikLogoLight} from "../icons/Logo.tsx";
+import {QinetikLogoDark, QinetikLogoLight} from "../icons/Logo";
 import {styled} from "@qinetik/emotion";
 import {Column, Icon, Row} from "@qinetik/anique";
-import {FacebookIcon, GithubIconBlack, GithubIconWhite, LinkedInIcon, TwitterIcon} from "../icons/SocialIcons.tsx";
+import {FacebookIcon, GithubIconBlack, GithubIconWhite, LinkedInIcon, TwitterIcon} from "../icons/SocialIcons";
 
 const Section = styled(Column)`
 
@@ -11,7 +11,7 @@ const FooterContainer = styled(Row.withComponent("footer"))`
     width: 100%;
     padding: 0.5em 0 2em 0;
     justify-content: space-evenly;
-    align-items:start;
+    align-items: start;
 `
 
 const RowA = styled(Row.withComponent("a"))`
@@ -31,7 +31,7 @@ export default function Footer() {
                 </p>
                 <p>
                     Copyright &copy; Qinetik 2023
-                    <br />
+                    <br/>
                     All rights reserved
                 </p>
             </Section>
@@ -64,7 +64,7 @@ export default function Footer() {
                     <span>Github</span>
                 </RowA>
                 <RowA gap={"1em"} href="https://linkedin.com/company/qinetik/" target="_blank">
-                    <LinkedInIcon />
+                    <LinkedInIcon/>
                     <span>LinkedIn</span>
                 </RowA>
             </Section>
