@@ -1,33 +1,30 @@
 import {Anique, Headline, Size} from "@qinetik/anique";
 import {styled} from "@qinetik/emotion";
+import {PageContainer} from "~/solid/components/PageContainer";
 import ThemeLightDarkIcon from "@qinetik/mdi/ThemeLightDarkIcon";
 import CloudSyncOutlineIcon from "@qinetik/mdi/CloudSyncOutlineIcon";
 import SyncCircleIcon from "@qinetik/mdi/SyncCircleIcon";
 import WorldWideWebIcon from "@qinetik/mdi/WorldWideWebIcon";
 import MicrosoftWindowsIcon from "@qinetik/mdi/MicrosoftWindowsIcon";
 import GooglePlayIcon from "@qinetik/mdi/GooglePlayIcon";
-import {PageContainer} from "~/solid/components/PageContainer";
 
-export default function TimelinePage() {
-
-    const theme = Anique
-
+export default function SketchableRoute() {
     return (
         <PageContainer>
             <MainContainer>
                 <MainSlide>
                     <Headline size={Size.Large}
-                              style={{color: theme.colors.onBg, "text-align": "center", "margin-top": "-1em"}}>
-                        Meet <span style={{background: theme.colors.accent}}>T</span>imeline
+                              style={{color: Anique.colors.onBg, "text-align": "center", "margin-top": "-1em"}}>
+                        Meet Sketchable
                     </Headline>
-                    <Headline style={{color: theme.colors.onBg, "text-align": "center", "margin-top": "0"}}>
-                        A Note Taking Tool
+                    <Headline style={{color: Anique.colors.onBg, "text-align": "center", "margin-top": "0"}}>
+                        A Sketching / Drawing Tool
                     </Headline>
                     <MainDemoContainer>
                         <img
-                            src={"/apps/timeline/screenshots/demo-1.png"}
+                            src={"/apps/sketchable/screenshots/demo (1).jpg"}
                             alt={"Demo First"}
-                            width={1000}
+                            width={400}
                         />
                     </MainDemoContainer>
                 </MainSlide>
@@ -155,19 +152,19 @@ const AvailableSection = () => {
             <span style={{color: theme.colors.primary}}>
                 Available Now
             </span>
-            <a href="https://qinetik.github.io/timeline-web" style={{"text-decoration": "none"}} target={"_blank"}>
-                <CustomMainButton style={{width: "270px"}}>
-                    <WorldWideWebIcon/>
-                    <span style={{
-                        width: "100%",
-                        color: "white",
-                        "margin-left": "1em",
-                    }}>
-                        Try on Web
-                    </span>
-                </CustomMainButton>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.wakaztahir.timeline"
+            {/*<a href="https://qinetik.github.io/timeline-web" style={{"text-decoration": "none"}} target={"_blank"}>*/}
+            {/*    <CustomMainButton style={{width: "270px"}}>*/}
+            {/*        <WorldWideWebIcon/>*/}
+            {/*        <span style={{*/}
+            {/*            width: "100%",*/}
+            {/*            color: "white",*/}
+            {/*            "margin-left": "1em",*/}
+            {/*        }}>*/}
+            {/*            Try on Web*/}
+            {/*        </span>*/}
+            {/*    </CustomMainButton>*/}
+            {/*</a>*/}
+            <a href="https://play.google.com/store/apps/details?id=com.wakaztahir.sketchapp"
                style={{"text-decoration": "none"}} target={"_blank"}>
                 <CustomMainButton style={{width: "270px"}}>
                     <GooglePlayIcon/>
@@ -180,19 +177,19 @@ const AvailableSection = () => {
                 </span>
                 </CustomMainButton>
             </a>
-            <a href="https://github.com/codeckle/timeline-kmp/releases/download/1.0.19/Timeline-1.0.19.msi"
-               style={{"text-decoration": "none"}} target={"_blank"}>
-                <CustomMainButton style={{width: "270px"}}>
-                    <MicrosoftWindowsIcon/>
-                    <span style={{
-                        width: "100%",
-                        color: "white",
-                        "margin-left": "1em"
-                    }}>
-                    Download for Windows
-                </span>
-                </CustomMainButton>
-            </a>
+            {/*<a href="https://github.com/codeckle/timeline-kmp/releases/download/1.0.19/Sketchable-1.0.19.msi"*/}
+            {/*   style={{"text-decoration": "none"}} target={"_blank"}>*/}
+            {/*    <CustomMainButton style={{width: "270px"}}>*/}
+            {/*        <MicrosoftWindowsIcon/>*/}
+            {/*        <span style={{*/}
+            {/*            width: "100%",*/}
+            {/*            color: "white",*/}
+            {/*            "margin-left": "1em"*/}
+            {/*        }}>*/}
+            {/*        Download for Windows*/}
+            {/*    </span>*/}
+            {/*    </CustomMainButton>*/}
+            {/*</a>*/}
         </CenteredColumn>
     )
 }
@@ -207,18 +204,17 @@ const DemoSectionOne = () => {
                 </h3>
                 <br/>
                 <p style={{"text-align": "center"}}>
-                    Timeline provides most features required to draw out multiple
-                    images into one note , that can be shared & exported. <br/>
+                    Sketchable provides most features required to draw out multiple
+                    images into one canvas , that can be shared & exported. <br/>
                     Features like undo , redo , background color change , pointer color ,
                     zoom & pan and the ability to toggle between them easily. <br/>
-                    But most prominent feature of sketch is that it exports to SVG.
                 </p>
             </DemoText>
             <DemoImage>
                 <img
-                    src={"/apps/timeline/screenshots/demo-2.png"}
+                    src={"/apps/sketchable/screenshots/demo (2).jpg"}
                     alt={"Demo Second"}
-                    width={1000}
+                    width={450}
                 />
             </DemoImage>
         </DemoContainer>
@@ -230,9 +226,9 @@ const DemoSectionTwo = styled((props) => {
         <DemoContainer {...props}>
             <DemoImage>
                 <img
-                    src={"/apps/timeline/screenshots/demo-3.png"}
+                    src={"/apps/sketchable/screenshots/demo (3).jpg"}
                     alt={"Demo Third"}
-                    width={1000}
+                    width={450}
                 />
             </DemoImage>
             <DemoText>
@@ -241,11 +237,9 @@ const DemoSectionTwo = styled((props) => {
                     Easy To Understand
                 </h3>
                 <br/>
+
                 <p style={{"text-align": "center"}}>
-                    Timeline makes it easy to access the items you need.
-                    Everything will feel under your control.<br/>
-                    It will save you a low of time to do everything else and
-                    help you to be more productive , The app will suit to your needs.
+                    Sketchable’s color picker and infinite canvas are two standout features that elevate the drawing and sketching experience on Android. The color picker offers a rich spectrum of hues, shades, and tones, enabling artists to effortlessly explore and select the perfect color for their creations. With a user-friendly interface, it allows for precise color selection and customization, enhancing the depth and vibrancy of artwork. Meanwhile, the infinite canvas provides an expansive digital space without boundaries, granting artists the freedom to unleash their creativity without constraints. It encourages an uninterrupted flow of ideas, allowing artists to seamlessly expand their designs, illustrations, or concepts without worrying about space limitations. Together, these features empower artists to delve into their imagination and bring their ideas to life with precision and boundless creativity.
                 </p>
             </DemoText>
         </DemoContainer>

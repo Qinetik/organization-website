@@ -8,26 +8,23 @@ import MicrosoftWindowsIcon from "@qinetik/mdi/MicrosoftWindowsIcon";
 import GooglePlayIcon from "@qinetik/mdi/GooglePlayIcon";
 import {PageContainer} from "~/solid/components/PageContainer";
 
-export default function TimelinePage() {
-
-    const theme = Anique
-
+export default function easyToDoPage() {
     return (
         <PageContainer>
             <MainContainer>
                 <MainSlide>
                     <Headline size={Size.Large}
-                              style={{color: theme.colors.onBg, "text-align": "center", "margin-top": "-1em"}}>
-                        Meet <span style={{background: theme.colors.accent}}>T</span>imeline
+                              style={{color: Anique.colors.onBg, "text-align": "center", "margin-top": "-1em"}}>
+                        Meet easyToDo
                     </Headline>
-                    <Headline style={{color: theme.colors.onBg, "text-align": "center", "margin-top": "0"}}>
-                        A Note Taking Tool
+                    <Headline style={{color: Anique.colors.onBg, "text-align": "center", "margin-top": "0"}}>
+                        Task Management Tool
                     </Headline>
                     <MainDemoContainer>
                         <img
-                            src={"/apps/timeline/screenshots/demo-1.png"}
+                            src={"/apps/easytodo/screenshots/demo (1).png"}
                             alt={"Demo First"}
-                            width={1000}
+                            width={450}
                         />
                     </MainDemoContainer>
                 </MainSlide>
@@ -147,27 +144,24 @@ const AllFeatures = styled((props) => {
 `
 
 const AvailableSection = () => {
-
-    const theme = Anique
-
     return (
         <CenteredColumn>
-            <span style={{color: theme.colors.primary}}>
+            <span style={{color: Anique.colors.primary}}>
                 Available Now
             </span>
-            <a href="https://qinetik.github.io/timeline-web" style={{"text-decoration": "none"}} target={"_blank"}>
-                <CustomMainButton style={{width: "270px"}}>
-                    <WorldWideWebIcon/>
-                    <span style={{
-                        width: "100%",
-                        color: "white",
-                        "margin-left": "1em",
-                    }}>
-                        Try on Web
-                    </span>
-                </CustomMainButton>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.wakaztahir.timeline"
+            {/*<a href="https://qinetik.github.io/easyToDo-web" style={{"text-decoration": "none"}} target={"_blank"}>*/}
+            {/*    <CustomMainButton style={{width: "270px"}}>*/}
+            {/*        <WorldWideWebIcon/>*/}
+            {/*        <span style={{*/}
+            {/*            width: "100%",*/}
+            {/*            color: "white",*/}
+            {/*            "margin-left": "1em",*/}
+            {/*        }}>*/}
+            {/*            Try on Web*/}
+            {/*        </span>*/}
+            {/*    </CustomMainButton>*/}
+            {/*</a>*/}
+            <a href="https://play.google.com/store/apps/details?id=com.wakaztahir.easytodo"
                style={{"text-decoration": "none"}} target={"_blank"}>
                 <CustomMainButton style={{width: "270px"}}>
                     <GooglePlayIcon/>
@@ -180,19 +174,19 @@ const AvailableSection = () => {
                 </span>
                 </CustomMainButton>
             </a>
-            <a href="https://github.com/codeckle/timeline-kmp/releases/download/1.0.19/Timeline-1.0.19.msi"
-               style={{"text-decoration": "none"}} target={"_blank"}>
-                <CustomMainButton style={{width: "270px"}}>
-                    <MicrosoftWindowsIcon/>
-                    <span style={{
-                        width: "100%",
-                        color: "white",
-                        "margin-left": "1em"
-                    }}>
-                    Download for Windows
-                </span>
-                </CustomMainButton>
-            </a>
+            {/*<a href="https://github.com/codeckle/easyToDo-kmp/releases/download/1.0.19/easyToDo-1.0.19.msi"*/}
+            {/*   style={{"text-decoration": "none"}} target={"_blank"}>*/}
+            {/*    <CustomMainButton style={{width: "270px"}}>*/}
+            {/*        <MicrosoftWindowsIcon/>*/}
+            {/*        <span style={{*/}
+            {/*            width: "100%",*/}
+            {/*            color: "white",*/}
+            {/*            "margin-left": "1em"*/}
+            {/*        }}>*/}
+            {/*        Download for Windows*/}
+            {/*    </span>*/}
+            {/*    </CustomMainButton>*/}
+            {/*</a>*/}
         </CenteredColumn>
     )
 }
@@ -202,23 +196,20 @@ const DemoSectionOne = () => {
         <DemoContainer>
             <DemoText>
                 <h3 style={{"text-align": "center"}}>
-                    Sketch Out <br/>
-                    Your Thoughts
+                    Create Lists Fast
                 </h3>
                 <br/>
                 <p style={{"text-align": "center"}}>
-                    Timeline provides most features required to draw out multiple
-                    images into one note , that can be shared & exported. <br/>
-                    Features like undo , redo , background color change , pointer color ,
-                    zoom & pan and the ability to toggle between them easily. <br/>
-                    But most prominent feature of sketch is that it exports to SVG.
+                    Since easyToDo is literally easy, Its very fast to create tasks and lists
+                    on the app. You can create lists and tasks in a matter of seconds.
+                    You can also create subtasks and details for each task.
                 </p>
             </DemoText>
             <DemoImage>
                 <img
-                    src={"/apps/timeline/screenshots/demo-2.png"}
+                    src={"/apps/easytodo/screenshots/demo (2).png"}
                     alt={"Demo Second"}
-                    width={1000}
+                    width={450}
                 />
             </DemoImage>
         </DemoContainer>
@@ -230,22 +221,21 @@ const DemoSectionTwo = styled((props) => {
         <DemoContainer {...props}>
             <DemoImage>
                 <img
-                    src={"/apps/timeline/screenshots/demo-3.png"}
+                    src={"/apps/easytodo/screenshots/demo (3).png"}
                     alt={"Demo Third"}
-                    width={1000}
+                    width={450}
                 />
             </DemoImage>
             <DemoText>
                 <h3 style={{"text-align": "center"}}>
-                    Intuitive <br/>
-                    Easy To Understand
+                    Organize and Prioritize
                 </h3>
                 <br/>
                 <p style={{"text-align": "center"}}>
-                    Timeline makes it easy to access the items you need.
-                    Everything will feel under your control.<br/>
-                    It will save you a low of time to do everything else and
-                    help you to be more productive , The app will suit to your needs.
+                    You can prioritize items, mark them as important and even add due dates.
+                    You can also organize your tasks into lists and even add colors to them.
+                    You can add reminder to each task. Tags for organization,
+                    Set repition of the reminder
                 </p>
             </DemoText>
         </DemoContainer>

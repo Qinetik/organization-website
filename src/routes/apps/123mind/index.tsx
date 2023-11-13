@@ -8,26 +8,23 @@ import MicrosoftWindowsIcon from "@qinetik/mdi/MicrosoftWindowsIcon";
 import GooglePlayIcon from "@qinetik/mdi/GooglePlayIcon";
 import {PageContainer} from "~/solid/components/PageContainer";
 
-export default function TimelinePage() {
-
-    const theme = Anique
-
+export default function MindNodePage() {
     return (
         <PageContainer>
             <MainContainer>
                 <MainSlide>
                     <Headline size={Size.Large}
-                              style={{color: theme.colors.onBg, "text-align": "center", "margin-top": "-1em"}}>
-                        Meet <span style={{background: theme.colors.accent}}>T</span>imeline
+                              style={{color: Anique.colors.onBg, "text-align": "center", "margin-top": "-1em"}}>
+                        Meet MindNode
                     </Headline>
-                    <Headline style={{color: theme.colors.onBg, "text-align": "center", "margin-top": "0"}}>
-                        A Note Taking Tool
+                    <Headline style={{color: Anique.colors.onBg, "text-align": "center", "margin-top": "0"}}>
+                        A MindMapping Tool
                     </Headline>
                     <MainDemoContainer>
                         <img
-                            src={"/apps/timeline/screenshots/demo-1.png"}
+                            src={"/apps/123mind/screenshots/demo (1).png"}
                             alt={"Demo First"}
-                            width={1000}
+                            width={450}
                         />
                     </MainDemoContainer>
                 </MainSlide>
@@ -46,12 +43,6 @@ export default function TimelinePage() {
 const SecondaryHeading = styled("h2")`
     ${Anique.breakpoints.down("md")} {
         font-size: 2rem !important;
-    }
-`
-
-const MainHeading = styled("h1")`
-    ${props => Anique.breakpoints.down("md")} {
-        font-size: 4rem !important;
     }
 `
 
@@ -147,27 +138,24 @@ const AllFeatures = styled((props) => {
 `
 
 const AvailableSection = () => {
-
-    const theme = Anique
-
     return (
         <CenteredColumn>
-            <span style={{color: theme.colors.primary}}>
+            <span style={{color: Anique.colors.primary}}>
                 Available Now
             </span>
-            <a href="https://qinetik.github.io/timeline-web" style={{"text-decoration": "none"}} target={"_blank"}>
-                <CustomMainButton style={{width: "270px"}}>
-                    <WorldWideWebIcon/>
-                    <span style={{
-                        width: "100%",
-                        color: "white",
-                        "margin-left": "1em",
-                    }}>
-                        Try on Web
-                    </span>
-                </CustomMainButton>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.wakaztahir.timeline"
+            {/*<a href="https://qinetik.github.io/mindnode-web" style={{"text-decoration": "none"}} target={"_blank"}>*/}
+            {/*    <CustomMainButton style={{width: "270px"}}>*/}
+            {/*        <WorldWideWebIcon/>*/}
+            {/*        <span style={{*/}
+            {/*            width: "100%",*/}
+            {/*            color: "white",*/}
+            {/*            "margin-left": "1em",*/}
+            {/*        }}>*/}
+            {/*            Try on Web*/}
+            {/*        </span>*/}
+            {/*    </CustomMainButton>*/}
+            {/*</a>*/}
+            <a href="https://play.google.com/store/apps/details?id=com.wakaztahir.mindnode"
                style={{"text-decoration": "none"}} target={"_blank"}>
                 <CustomMainButton style={{width: "270px"}}>
                     <GooglePlayIcon/>
@@ -180,19 +168,19 @@ const AvailableSection = () => {
                 </span>
                 </CustomMainButton>
             </a>
-            <a href="https://github.com/codeckle/timeline-kmp/releases/download/1.0.19/Timeline-1.0.19.msi"
-               style={{"text-decoration": "none"}} target={"_blank"}>
-                <CustomMainButton style={{width: "270px"}}>
-                    <MicrosoftWindowsIcon/>
-                    <span style={{
-                        width: "100%",
-                        color: "white",
-                        "margin-left": "1em"
-                    }}>
-                    Download for Windows
-                </span>
-                </CustomMainButton>
-            </a>
+            {/*<a href="https://github.com/codeckle/mindnode-kmp/releases/download/1.0.19/MindNode-1.0.19.msi"*/}
+            {/*   style={{"text-decoration": "none"}} target={"_blank"}>*/}
+            {/*    <CustomMainButton style={{width: "270px"}}>*/}
+            {/*        <MicrosoftWindowsIcon/>*/}
+            {/*        <span style={{*/}
+            {/*            width: "100%",*/}
+            {/*            color: "white",*/}
+            {/*            "margin-left": "1em"*/}
+            {/*        }}>*/}
+            {/*        Download for Windows*/}
+            {/*    </span>*/}
+            {/*    </CustomMainButton>*/}
+            {/*</a>*/}
         </CenteredColumn>
     )
 }
@@ -202,23 +190,20 @@ const DemoSectionOne = () => {
         <DemoContainer>
             <DemoText>
                 <h3 style={{"text-align": "center"}}>
-                    Sketch Out <br/>
-                    Your Thoughts
+                    Draw Inside A MindMap
                 </h3>
                 <br/>
                 <p style={{"text-align": "center"}}>
-                    Timeline provides most features required to draw out multiple
-                    images into one note , that can be shared & exported. <br/>
-                    Features like undo , redo , background color change , pointer color ,
-                    zoom & pan and the ability to toggle between them easily. <br/>
-                    But most prominent feature of sketch is that it exports to SVG.
+                    If you ever want to make a note, Just draw it inside the MindMap.
+                    Drawing capabilities are just as strong as Sketchable, Our drawing App.
+                    Which started from 123Mind.
                 </p>
             </DemoText>
             <DemoImage>
                 <img
-                    src={"/apps/timeline/screenshots/demo-2.png"}
+                    src={"/apps/123mind/screenshots/demo (2).png"}
                     alt={"Demo Second"}
-                    width={1000}
+                    width={450}
                 />
             </DemoImage>
         </DemoContainer>
@@ -230,22 +215,19 @@ const DemoSectionTwo = styled((props) => {
         <DemoContainer {...props}>
             <DemoImage>
                 <img
-                    src={"/apps/timeline/screenshots/demo-3.png"}
+                    src={"/apps/123mind/screenshots/demo (3).png"}
                     alt={"Demo Third"}
-                    width={1000}
+                    width={450}
                 />
             </DemoImage>
             <DemoText>
                 <h3 style={{"text-align": "center"}}>
-                    Intuitive <br/>
-                    Easy To Understand
+                    Import Images
                 </h3>
                 <br/>
                 <p style={{"text-align": "center"}}>
-                    Timeline makes it easy to access the items you need.
-                    Everything will feel under your control.<br/>
-                    It will save you a low of time to do everything else and
-                    help you to be more productive , The app will suit to your needs.
+                    You can import images into your drawing and your MindMap.
+                    Just like you would do in Sketchable.
                 </p>
             </DemoText>
         </DemoContainer>
