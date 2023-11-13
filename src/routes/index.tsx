@@ -103,7 +103,7 @@ export default function Home() {
                         <Row style={{"align-items": "center"}}>
                             <div>
                                 <img
-                                    src={"/apps/mindnode/screenshots/mindnode_screen.png"}
+                                    src={"/apps/123mind/screenshots/mindnode_screen.png"}
                                     alt={"MindNode Screenshot"}
                                     style={{width: "620px", height: "800px", "object-fit": "contain", "min-width": "620px"}}
                                 />
@@ -168,20 +168,24 @@ export default function Home() {
                                     <AppCard
                                         icon={() => <TimelineIcon/>}
                                         title={"Timeline"}
+                                        link={"/apps/timeline"}
                                     />
                                     <AppCard
                                         iconSrc={"easy_to_do.png"}
                                         iconAlt={"Easy To Do Icon"}
                                         title={"EasyToDo"}
+                                        link={"/apps/easytodo"}
                                     />
                                     <AppCard
                                         icon={() => <MindNodeIcon/>}
-                                        title={"MindNode"}
+                                        title={"123Mind"}
+                                        link={"/apps/123mind"}
                                     />
                                     <AppCard
                                         iconSrc={"sketchable.png"}
                                         iconAlt={"Sketchable Icon"}
                                         title={"Sketchable"}
+                                        link={"/apps/sketchable"}
                                     />
                                     <AppCard
                                         icon={() => <PhotoEditorIcon/>}
@@ -309,6 +313,7 @@ interface AppCardProps {
     iconSrc?: string
     iconAlt?: string
     title: any
+    link ?: string
 }
 
 function AppCard(props: AppCardProps) {
@@ -322,7 +327,11 @@ function AppCard(props: AppCardProps) {
                     height={"48"}
                 />
             )}
-            <span>{props.title}</span>
+            {props.link ? (
+                <a href={props.link}>{props.title}</a>
+            ) : (
+                <span>{props.title}</span>
+            )}
         </Row>
     )
 }
