@@ -7,9 +7,10 @@ export default function Root() {
     return (
         <Html lang="en" class={"dark"}>
             <Head>
-                <Title>SolidStart - With Anique</Title>
+                <Title>Qinetik - App Development</Title>
                 <Meta charset="utf-8"/>
                 <Meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <Meta name={"description"} content={"We create productivity apps"}/>
                 <AniqueThemeAutoSetup />
             </Head>
             <Body>

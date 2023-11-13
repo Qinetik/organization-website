@@ -15,7 +15,7 @@ export default function MindNodePage() {
                 <MainSlide>
                     <Headline size={Size.Large}
                               style={{color: Anique.colors.onBg, "text-align": "center", "margin-top": "-1em"}}>
-                        Meet MindNode
+                        Meet 123Mind
                     </Headline>
                     <Headline style={{color: Anique.colors.onBg, "text-align": "center", "margin-top": "0"}}>
                         A MindMapping Tool
