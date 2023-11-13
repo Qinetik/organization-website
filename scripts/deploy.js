@@ -1,6 +1,6 @@
 import ghPages from "gh-pages"
 
-ghPages.publish('dist', {
+ghPages.publish('dist/public', {
     branch: 'gh-pages',
     repo: 'https://github.com/Qinetik/qinetik.github.io.git'
 }, (err) => {
