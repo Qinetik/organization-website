@@ -9,8 +9,11 @@ const Section = styled(Column)`
 
 const FooterContainer = styled(Row.withComponent("footer"))`
     width: 100%;
-    padding: 0.5em 0 2em 0;
+    padding: 2em;
+    box-sizing : border-box;
     justify-content: space-evenly;
+    flex-wrap : wrap;
+    gap : 2em;
     align-items: start;
 `
 
