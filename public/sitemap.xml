@@ -1,39 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-  <loc>https://qinetik.org/apps/timeline</loc>
-  <priority>0.5</priority>
-  <changefreq>weekly</changefreq>
-  <lastmod>2023-11-13</lastmod>
-</url>
-<url>
-  <loc>https://qinetik.org/apps/easytodo</loc>
-  <priority>0.5</priority>
-  <changefreq>weekly</changefreq>
-  <lastmod>2023-11-13</lastmod>
-</url>
-<url>
-  <loc>https://qinetik.org/apps/123mind</loc>
-  <priority>0.5</priority>
-  <changefreq>weekly</changefreq>
-  <lastmod>2023-11-13</lastmod>
-</url>
-<url>
-  <loc>https://qinetik.org/apps/sketchable</loc>
-  <priority>0.5</priority>
-  <changefreq>weekly</changefreq>
-  <lastmod>2023-11-13</lastmod>
-</url>
-<url>
-  <loc>https://qinetik.org/terms</loc>
-  <priority>0.5</priority>
-  <changefreq>weekly</changefreq>
-  <lastmod>2023-11-13</lastmod>
-</url>
-<url>
-  <loc>https://qinetik.org/privacy</loc>
-  <priority>0.5</priority>
-  <changefreq>weekly</changefreq>
-  <lastmod>2023-11-13</lastmod>
-</url>
+    <url>
+        <loc>https://qinetik.org/apps/timeline</loc>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <lastmod>2023-11-13</lastmod>
+    </url>
+    <url>
+        <loc>https://qinetik.org/apps/easytodo</loc>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <lastmod>2023-11-13</lastmod>
+    </url>
+    <url>
+        <loc>https://qinetik.org/apps/123mind</loc>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <lastmod>2023-11-13</lastmod>
+    </url>
+    <url>
+        <loc>https://qinetik.org/apps/sketchable</loc>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <lastmod>2023-11-13</lastmod>
+    </url>
+    <url>
+        <loc>https://qinetik.org/terms</loc>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <lastmod>2023-11-13</lastmod>
+    </url>
+    <url>
+        <loc>https://qinetik.org/privacy</loc>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <lastmod>2023-11-13</lastmod>
+    </url>
+    <url>
+        <loc>https://quiz.qinetik.org</loc>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+        <lastmod>2024-01-05</lastmod>
+    </url>
 </urlset>
