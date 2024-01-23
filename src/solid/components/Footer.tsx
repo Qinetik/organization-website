@@ -2,6 +2,7 @@ import {QinetikLogoDark, QinetikLogoLight} from "../icons/Logo";
 import {styled} from "@qinetik/emotion";
 import {Column, Icon, Row} from "@qinetik/anique";
 import {FacebookIcon, GithubIconBlack, GithubIconWhite, LinkedInIcon, TwitterIcon} from "../icons/SocialIcons";
+import {A} from "@solidjs/router";
 
 const Section = styled(Column)`
 
@@ -17,7 +18,11 @@ const FooterContainer = styled(Row.withComponent("footer"))`
     align-items: start;
 `
 
-const RowA = styled(Row.withComponent("a"))`
+const RowA = styled(Row.withComponent(A))`
+
+`
+
+const RowExA = styled(Row.withComponent("a"))`
 
 `
 
@@ -30,7 +35,7 @@ export default function Footer() {
                     <QinetikLogoLight class={"display-in-dark"}/>
                 </div>
                 <p>
-                    <a href="/terms">Terms of services</a> | <a href="/privacy">Privacy</a>
+                    <A href="/terms">Terms of services</A> | <A href="/privacy">Privacy</A>
                 </p>
                 <p>
                     Copyright &copy; Qinetik 2023
@@ -46,30 +51,30 @@ export default function Footer() {
             </Section>
             <Section gap={"2em"}>
                 <h4>Our Information</h4>
-                <a href={"/privacy"}>Privacy Policy</a>
-                <a href="/terms">Terms &amp; Conditions</a>
+                <A href={"/privacy"}>Privacy Policy</A>
+                <A href="/terms">Terms &amp; Conditions</A>
             </Section>
             <Section gap={"2em"}>
                 <h4>Connect</h4>
-                <RowA gap={"1em"} href="https://www.facebook.com/qinetik/" target="_blank">
+                <RowExA gap={"1em"} href="https://www.facebook.com/qinetik/" target="_blank">
                     <FacebookIcon/>
                     <span>Facebook</span>
-                </RowA>
-                <RowA gap={"1em"} href="https://twitter.com/qinetikofficial" target="_blank">
+                </RowExA>
+                <RowExA gap={"1em"} href="https://twitter.com/qinetikofficial" target="_blank">
                     <Icon>
                         <TwitterIcon/>
                     </Icon>
                     <span>Twitter</span>
-                </RowA>
-                <RowA gap={"1em"} href="https://github.com/Qinetik/" target="_blank">
+                </RowExA>
+                <RowExA gap={"1em"} href="https://github.com/Qinetik/" target="_blank">
                     <GithubIconWhite class={"display-in-dark"}/>
                     <GithubIconBlack class={"display-in-light"}/>
                     <span>Github</span>
-                </RowA>
-                <RowA gap={"1em"} href="https://linkedin.com/company/qinetik/" target="_blank">
+                </RowExA>
+                <RowExA gap={"1em"} href="https://linkedin.com/company/qinetik/" target="_blank">
                     <LinkedInIcon/>
                     <span>LinkedIn</span>
-                </RowA>
+                </RowExA>
             </Section>
         </FooterContainer>
     )

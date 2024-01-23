@@ -3,7 +3,7 @@ import { styled } from "@qinetik/emotion";
 
 export interface AnchorDrawerItemProps {
     href: string
-    current: string
+    current: boolean
     class?: string
     children?: any
 }
@@ -13,10 +13,9 @@ const StyledA = styled("a")`
 `
 
 export default function AnchorDrawerItem(props: AnchorDrawerItemProps) {
-    const isActive = props.current == props.href
     return (
-        <StyledA href={props.href} class={isActive ? (props.class || "active") : undefined}>
-            <DrawerItem isActive={isActive}>{props.children}</DrawerItem>
+        <StyledA href={props.href} class={props.current ? (props.class || "active") : undefined}>
+            <DrawerItem isActive={props.current}>{props.children}</DrawerItem>
         </StyledA>
     )
 }

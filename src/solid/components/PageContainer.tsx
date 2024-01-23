@@ -4,7 +4,7 @@ import {WebAppBar} from "~/solid/components/AppBar";
 import Footer from "~/solid/components/Footer";
 import {createGlobalStyle} from "@qinetik/emotion";
 
-const Global = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 
     body {
         margin: 0;
@@ -32,7 +32,7 @@ export function PageContainer(props : ParentProps) {
     return (
         <Column class="encapsulation">
 
-            <Global />
+            <GlobalStyles />
 
             <WebAppBar />
 

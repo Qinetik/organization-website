@@ -3,6 +3,7 @@ import {styled} from "@qinetik/emotion";
 import {MindNodeIcon, PhotoEditorIcon, TimelineIcon} from "~/solid/icons/AppIcons";
 import {JSXElement} from "solid-js";
 import {PageContainer} from "~/solid/components/PageContainer";
+import {A} from "@solidjs/router";
 
 const Container = styled(Column)`
     width: 100%;
@@ -396,7 +397,7 @@ function AppCard(props: AppCardProps) {
                 />
             )}
             {props.link ? (
-                <a href={props.link}>{props.title}</a>
+                <A href={props.link}>{props.title}</A>
             ) : (
                 <span>{props.title}</span>
             )}
