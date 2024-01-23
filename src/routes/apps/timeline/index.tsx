@@ -1,4 +1,4 @@
-import {Anique, Headline, Size} from "@qinetik/anique";
+import {Anique, Headline, Size, UnstyledLink} from "@qinetik/anique";
 import {styled} from "@qinetik/emotion";
 import ThemeLightDarkIcon from "@qinetik/mdi/ThemeLightDarkIcon";
 import CloudSyncOutlineIcon from "@qinetik/mdi/CloudSyncOutlineIcon";
@@ -7,6 +7,7 @@ import WorldWideWebIcon from "@qinetik/mdi/WorldWideWebIcon";
 import MicrosoftWindowsIcon from "@qinetik/mdi/MicrosoftWindowsIcon";
 import GooglePlayIcon from "@qinetik/mdi/GooglePlayIcon";
 import {PageContainer} from "~/solid/components/PageContainer";
+import {A} from "@solidjs/router";
 
 export default function TimelinePage() {
 
@@ -193,9 +194,18 @@ const AvailableSection = () => {
                 </span>
                 </CustomMainButton>
             </a>
+            <Link href={"/docs/timeline"}>
+                Visit the docs
+            </Link>
         </CenteredColumn>
     )
 }
+
+const Link = styled(A)`
+    color: ${Anique.colors.onBg200};
+    text-decoration: none;
+    margin-top: 1em;
+`
 
 const DemoSectionOne = () => {
     return (
