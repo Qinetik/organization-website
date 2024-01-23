@@ -3,6 +3,7 @@ import {styled} from "@qinetik/emotion";
 import {Column, Icon, Row} from "@qinetik/anique";
 import {FacebookIcon, GithubIconBlack, GithubIconWhite, LinkedInIcon, TwitterIcon} from "../icons/SocialIcons";
 import {A} from "@solidjs/router";
+import CookiesConsentDisplayer from "~/solid/components/CookiesDisplayer";
 
 const Section = styled(Column)`
 
@@ -76,6 +77,7 @@ export default function Footer() {
                     <span>LinkedIn</span>
                 </RowExA>
             </Section>
+            <CookiesConsentDisplayer />
         </FooterContainer>
     )
 }
