@@ -25,7 +25,6 @@ export default function TimelineDocsNavigation() {
             <Item href={"./code-math"}>Add Code, Math to a Note</Item>
             <Item href={"./sketch"}>Add Drawing to a Note</Item>
             <Item href={"./export"}>Export a Note</Item>
-            <Item href={"./customize"}>Customizing Timeline</Item>
         </StaticDrawer>
     )
 }
