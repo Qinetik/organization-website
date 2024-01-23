@@ -205,6 +205,11 @@ const Link = styled(A)`
     color: ${Anique.colors.onBg200};
     text-decoration: none;
     margin-top: 1em;
+    
+    &:hover {
+        color : ${Anique.colors.onBg};
+        text-decoration : underline;
+    }
 `
 
 const DemoSectionOne = () => {
