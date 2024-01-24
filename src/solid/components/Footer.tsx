@@ -36,7 +36,7 @@ export default function Footer() {
                     <QinetikLogoLight class={"display-in-dark"}/>
                 </div>
                 <p>
-                    <A href="/terms">Terms of services</A> | <A href="/privacy">Privacy</A>
+                    <A href="/terms/">Terms of services</A> | <A href="/privacy/">Privacy</A>
                 </p>
                 <p>
                     Copyright &copy; Qinetik 2023
@@ -52,8 +52,8 @@ export default function Footer() {
             </Section>
             <Section gap={"2em"}>
                 <h4>Our Information</h4>
-                <A href={"/privacy"}>Privacy Policy</A>
-                <A href="/terms">Terms &amp; Conditions</A>
+                <A href={"/privacy/"}>Privacy Policy</A>
+                <A href="/terms/">Terms &amp; Conditions</A>
             </Section>
             <Section gap={"2em"}>
                 <h4>Connect</h4>

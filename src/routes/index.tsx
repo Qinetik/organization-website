@@ -1,6 +1,6 @@
 import {Accordion, Anique, BaseTextField, Button, Column, Headline, Row, Size, Spacer} from "@qinetik/anique";
 import {styled} from "@qinetik/emotion";
-import {MindNodeIcon, PhotoEditorIcon, TimelineIcon} from "~/solid/icons/AppIcons";
+import {MindNodeIcon, PhotoEditorIcon, QuiznetikIcon, TimelineIcon} from "~/solid/icons/AppIcons";
 import {JSXElement} from "solid-js";
 import {PageContainer} from "~/solid/components/PageContainer";
 import {A} from "@solidjs/router";
@@ -244,24 +244,29 @@ export default function Home() {
                             <AppCard
                                 icon={() => <TimelineIcon/>}
                                 title={"Timeline"}
-                                link={"/apps/timeline"}
+                                link={"/apps/timeline/"}
                             />
                             <AppCard
                                 iconSrc={"easy_to_do.png"}
                                 iconAlt={"Easy To Do Icon"}
                                 title={"EasyToDo"}
-                                link={"/apps/easytodo"}
+                                link={"/apps/easytodo/"}
                             />
                             <AppCard
                                 icon={() => <MindNodeIcon/>}
                                 title={"123Mind"}
-                                link={"/apps/123mind"}
+                                link={"/apps/123mind/"}
                             />
                             <AppCard
                                 iconSrc={"sketchable.png"}
                                 iconAlt={"Sketchable Icon"}
                                 title={"Sketchable"}
-                                link={"/apps/sketchable"}
+                                link={"/apps/sketchable/"}
+                            />
+                            <AppCard
+                                icon={() => <QuiznetikIcon/>}
+                                title={"Quiznetik"}
+                                link={"/apps/quiznetik/"}
                             />
                             <AppCard
                                 icon={() => <PhotoEditorIcon/>}

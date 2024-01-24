@@ -108,7 +108,7 @@ export default function TermsPage() {
 
                 <h3>8. Your Privacy</h3>
 
-                <Paragraph>Please read our <a href="/privacy">Privacy
+                <Paragraph>Please read our <a href="/privacy/">Privacy
                     Policy.</a></Paragraph>
 
                 <h3>9. Governing Law</h3>
