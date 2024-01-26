@@ -4,7 +4,7 @@ import {WebAppBar} from "~/solid/components/AppBar";
 import Footer from "~/solid/components/Footer";
 import {styled} from "@qinetik/emotion";
 import {A} from "@solidjs/router";
-import {ContentContainer} from "~/routes/docs/timeline/components/Utils";
+import {ContentContainer} from "~/solid/components/timeline/Utils";
 
 const NoMarginH1 = styled.h1`
     margin : 0;

@@ -1,4 +1,4 @@
-import TimelineDocsContainer from "~/routes/docs/timeline/components/TimelineDocsContainer";
+import TimelineDocsContainer from "~/solid/components/timeline/TimelineDocsContainer";
 
 export default function TimelineDocsCreate() {
     return (

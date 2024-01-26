@@ -2,9 +2,9 @@ import {Scaffold} from "@qinetik/anique";
 import {ParentProps} from "solid-js";
 import {WebAppBar} from "~/solid/components/AppBar";
 import Footer from "~/solid/components/Footer";
-import TimelineDocsNavigation from "~/routes/docs/timeline/components/DocsNavigation";
+import TimelineDocsNavigation from "~/solid/components/timeline/DocsNavigation";
 import {GlobalStyles} from "~/solid/components/PageContainer";
-import {ContentContainer} from "~/routes/docs/timeline/components/Utils";
+import {ContentContainer} from "~/solid/components/timeline/Utils";
 
 export interface DocsContainerProps extends ParentProps {
 
