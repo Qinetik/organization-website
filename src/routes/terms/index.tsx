@@ -1,9 +1,15 @@
 import {styled} from "@qinetik/emotion";
-import {Column, Paragraph, UL} from "@qinetik/anique";
+import {Anique, Column, Paragraph, UL} from "@qinetik/anique";
 import {PageContainer} from "~/solid/components/PageContainer";
 
 const PaddedColumn = styled(Column)`
-    padding: 4rem 8rem;
+
+    padding: 2em;
+
+    ${Anique.breakpoints.up("md")} {
+        padding : 4em;
+    }
+
 `
 
 export default function TermsPage() {

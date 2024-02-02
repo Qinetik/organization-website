@@ -1,9 +1,15 @@
-import {Column, Paragraph} from "@qinetik/anique";
+import {Anique, Column, Paragraph} from "@qinetik/anique";
 import {styled} from "@qinetik/emotion";
 import {PageContainer} from "~/solid/components/PageContainer";
 
 const PaddedColumn = styled(Column)`
-    padding: 4rem 8rem;
+    
+    padding: 2em;
+    
+    ${Anique.breakpoints.up("md")} {
+        padding : 4em;
+    }
+    
 `
 
 export default function PrivacyPage() {
