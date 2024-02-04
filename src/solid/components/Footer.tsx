@@ -47,7 +47,7 @@ export default function Footer() {
             {/* TODO fix these links */}
             <Section gap={"2em"}>
                 <h4>About Us</h4>
-                <a>Customer Support</a>
+                <A href={"/contact/"}>Customer Support</A>
                 <a href="#">Copyright</a>
             </Section>
             <Section gap={"2em"}>
