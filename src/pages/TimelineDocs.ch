@@ -63,6 +63,7 @@ public func TimelineDocsLayout(page : &mut HtmlPage, currentPath : std::string_v
             <title>Timeline Documentation | Qinetik</title>
             <meta name="description" content="Timeline Documentation">
             <link rel="icon" href="/assets/favicon.png" type="image/png">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
     }
 

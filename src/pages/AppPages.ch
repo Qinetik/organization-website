@@ -4,6 +4,7 @@ public func AppTimelinePage(page : &mut HtmlPage) {
             <title>Timeline | Qinetik</title>
             <meta name="description" content="Timeline is a note taking tool that allows you to create, update, delete, organize, manage, archive, color, add image, audio, code, math, sketch, drawing, export, customize, share, and export notes.">
             <link rel="icon" href="/assets/favicon.png" type="image/png">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
     }
     SharedAppLayout(
@@ -54,6 +55,7 @@ public func AppEasyToDoPage(page : &mut HtmlPage) {
             <title>EasyToDo | Qinetik</title>
             <meta name="description" content="EasyToDo is a task management tool.">
             <link rel="icon" href="/assets/favicon.png" type="image/png">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
     }
     SharedAppLayout(
@@ -100,6 +102,7 @@ public func AppMindNodePage(page : &mut HtmlPage) {
             <title>123Mind | Qinetik</title>
             <meta name="description" content="123Mind is a mind mapping tool available for multiple platforms">
             <link rel="icon" href="/assets/favicon.png" type="image/png">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
     }
     SharedAppLayout(
@@ -146,6 +149,7 @@ public func AppSketchablePage(page : &mut HtmlPage) {
             <title>Sketchable | Qinetik</title>
             <meta name="description" content="Sketchable is a sketching / drawing tool available for multiple platforms">
             <link rel="icon" href="/assets/favicon.png" type="image/png">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
     }
     SharedAppLayout(
@@ -192,6 +196,7 @@ public func AppQuiznetikPage(page : &mut HtmlPage) {
             <title>Quiznetik | Qinetik</title>
             <meta name="description" content="Quiznetik is an interactive quiz platform available for multiple platforms">
             <link rel="icon" href="/assets/favicon.png" type="image/png">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
     }
     SharedAppLayout(

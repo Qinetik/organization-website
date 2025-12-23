@@ -150,7 +150,9 @@ public func MainPage(page : &mut HtmlPage) {
         <div class="encapsulation">
             <head>
                 <title>Qinetik | App Development</title>
-                <link rel="icon" href="assets/favicon.png" type="image/png">
+                <link rel="icon" href="/assets/favicon.png" type="image/png">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="Qinetik is a company that provides a variety of apps to help individuals manage their personal tasks, notes and ideas.">
             </head>
             { WebAppBar(page) }
             <main class={containerClass}>
