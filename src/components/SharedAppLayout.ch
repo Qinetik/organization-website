@@ -9,38 +9,8 @@ public func SharedAppLayout(
     features : std::function<(p : &mut HtmlPage) => void>,
     availableLinks : std::function<(p : &mut HtmlPage) => void>
 ) {
-    // Define CSS variables for theming
-    var rootVars = #css {
-        html {
-            --primary-color: #4f46e5;
-            --primary-hover: #4338ca;
-            --secondary-color: #7c3aed;
-            --text-color: #1f2937;
-            --text-secondary: #6b7280;
-            --background-color: #ffffff;
-            --surface-color: #f9fafb;
-            --card-bg: #ffffff;
-            --border-color: #e5e7eb;
-            --appbar-bg: rgba(255, 255, 255, 0.8);
-            --button-bg: var(--primary-color);
-            --button-hover-bg: var(--primary-hover);
-            --button-text: #ffffff;
-            --button-border: transparent;
-        }
-        
-        .dark {
-            --text-color: #f3f4f6;
-            --text-secondary: #9ca3af;
-            --background-color: #111827;
-            --surface-color: #1f2937;
-            --card-bg: #1f2937;
-            --border-color: #374151;
-            --appbar-bg: rgba(17, 24, 39, 0.8);
-            --button-bg: #4f46e5;
-            --button-hover-bg: #4338ca;
-            --button-border: #4f46e5;
-        }
-    }
+
+    GlobalStyles(page)
 
     var pageClass = #css {
         min-height: 100vh;
@@ -137,15 +107,8 @@ public func SharedAppLayout(
         max-width: 90%;
         border-radius: 1rem;
         overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         transform: translateY(0);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid rgba(255,255,255,0.1);
-        
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-        }
         
         @media (min-width: 768px) {
             max-width: 80%;
@@ -165,107 +128,14 @@ public func SharedAppLayout(
 
     #html {
         <div class={pageClass}>
-            <head>
-                <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' rel='stylesheet' />
-                <style>{"""
-                    * {
-                        margin: 0;
-                        padding: 0;
-                        box-sizing: border-box;
-                    }
-                    
-                    html {
-                        scroll-behavior: smooth;
-                    }
-                    
-                    body {
-                        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                        color: var(--text-color);
-                        background-color: var(--background-color);
-                        transition: background-color 0.3s ease, color 0.3s ease;
-                    }
-                    
-                    a {
-                        color: var(--primary-color);
-                        text-decoration: none;
-                        transition: color 0.2s ease;
-                    }
-                    
-                    a:hover {
-                        color: var(--primary-hover);
-                    }
-                    
-                    h1, h2, h3, h4, h5, h6 {
-                        font-weight: 700;
-                        line-height: 1.2;
-                        margin-bottom: 1rem;
-                        color: var(--text-color);
-                    }
-                    
-                    p {
-                        margin-bottom: 1.5rem;
-                        color: var(--text-secondary);
-                    }
-                    
-                    .container {
-                        width: 100%;
-                        max-width: 1200px;
-                        margin: 0 auto;
-                        padding: 0 1.5rem;
-                    }
-                    
-                    /* Utility classes */
-                    .text-center { text-align: center; }
-                    .mt-1 { margin-top: 0.5rem; }
-                    .mt-2 { margin-top: 1rem; }
-                    .mt-3 { margin-top: 1.5rem; }
-                    .mt-4 { margin-top: 2rem; }
-                    .mt-5 { margin-top: 3rem; }
-                    .mb-1 { margin-bottom: 0.5rem; }
-                    .mb-2 { margin-bottom: 1rem; }
-                    .mb-3 { margin-bottom: 1.5rem; }
-                    .mb-4 { margin-bottom: 2rem; }
-                    .mb-5 { margin-bottom: 3rem; }
-                    .py-3 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-                    .py-4 { padding-top: 2rem; padding-bottom: 2rem; }
-                    .py-5 { padding-top: 3rem; padding-bottom: 3rem; }
-                    
-                    /* Display utilities for theme toggling */
-                    .display-in-light { display: var(--logo-light-display); }
-                    .display-in-dark { display: var(--logo-dark-display); }
-                    
-                    /* Smooth transitions for theme changes */
-                    * {
-                        transition: background-color 0.3s ease, 
-                                color 0.3s ease, 
-                                border-color 0.3s ease, 
-                                box-shadow 0.3s ease;
-                    }
-                    
-                    /* Hide elements that should only be visible to screen readers */
-                    .sr-only {
-                        position: absolute;
-                        width: 1px;
-                        height: 1px;
-                        padding: 0;
-                        margin: -1px;
-                        overflow: hidden;
-                        clip: rect(0, 0, 0, 0);
-                        white-space: nowrap;
-                        border-width: 0;
-                    }
-                """}</style>
-            </head>
             { WebAppBar(page) }
             <main class={mainClass}>
                 <section class={heroClass}>
-                    <h1 class={titleClass}>{title}</h1>
-                    <p class={subtitleClass}>{subtitle}</p>
+                    <h1 class={titleClass}>{title.data()}</h1>
+                    <p class={subtitleClass}>{subtitle.data()}</p>
                     <div class={heroImageContainer}>
                         <img 
-                            src={heroImage}
+                            src={heroImage.data()}
                             alt="App Screenshot" 
                             class={heroImageClass}
                             style={heroImageStyle.data()}
@@ -440,11 +310,6 @@ public func AppFeaturesRow(page : &mut HtmlPage) {
         color: white;
         border-radius: 1rem;
         margin-bottom: 1.5rem;
-        
-        svg {
-            width: 1.75rem;
-            height: 1.75rem;
-        }
     }
     
     var featureTitleClass = #css {
