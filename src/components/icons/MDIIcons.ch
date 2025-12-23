@@ -1,7 +1,7 @@
 public func MDIIcon(page : &mut HtmlPage, path : std::string_view, fill : std::string_view = "currentColor") {
     #html {
         <svg viewBox="0 0 24 24" width="24" height="24">
-            <path d={path.data()} fill={fill.data()}></path>
+            <path d={path.data()} fill={fill}></path>
         </svg>
     }
 }

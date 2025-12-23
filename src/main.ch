@@ -55,7 +55,10 @@ public func main(argc : int, argv : **char) : int {
     writePage(outPath, "docs/timeline", "Timeline Docs | Qinetik", (p : &mut HtmlPage) => { TimelineDocsIndex(p) })
     writePage(outPath, "docs/timeline/create", "Create Note - Docs | Qinetik", (p : &mut HtmlPage) => { TimelineDocsCreate(p) })
     writePage(outPath, "docs/timeline/organize", "Organize - Docs | Qinetik", (p : &mut HtmlPage) => { TimelineDocsOrganize(p) })
+    writePage(outPath, "docs/timeline/manage-notebooks", "Manage Notebooks - Docs | Qinetik", (p : &mut HtmlPage) => { TimelineDocsManageNotebooks(p) })
+    writePage(outPath, "docs/timeline/archive-color", "Archive, Color | Qinetik", (p : &mut HtmlPage) => { TimelineDocsArchiveColor(p) })
     writePage(outPath, "docs/timeline/image-audio", "Images & Audio - Docs | Qinetik", (p : &mut HtmlPage) => { TimelineDocsImageAudio(p) })
+    writePage(outPath, "docs/timeline/code-math", "Code & Math - Docs | Qinetik", (p : &mut HtmlPage) => { TimelineDocsCodeMath(p) })
     writePage(outPath, "docs/timeline/sketch", "Drawing - Docs | Qinetik", (p : &mut HtmlPage) => { TimelineDocsSketch(p) })
     writePage(outPath, "docs/timeline/export", "Export - Docs | Qinetik", (p : &mut HtmlPage) => { TimelineDocsExport(p) })
 
