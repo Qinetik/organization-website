@@ -148,6 +148,10 @@ public func MainPage(page : &mut HtmlPage) {
 
     #html {
         <div class="encapsulation">
+            <head>
+                <title>Qinetik | App Development</title>
+                <link rel="icon" href="assets/favicon.png" type="image/png">
+            </head>
             { WebAppBar(page) }
             <main class={containerClass}>
                 

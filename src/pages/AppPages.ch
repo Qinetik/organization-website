@@ -212,11 +212,7 @@ public func AppQuiznetikPage(page : &mut HtmlPage) {
                     transform: translateY(-2px);
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                 }
-                
-                svg {
-                    width: 1.2em;
-                    height: 1.2em;
-                }
+
             }
             
             #html {
