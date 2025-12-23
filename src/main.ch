@@ -18,6 +18,16 @@ func writePage(path : std::string_view, dirName : std::string_view, pageTitle : 
     page.writeToDirectory(std::string_view(fullDir.data(), fullDir.size()), fileName.to_view())
 }
 
+func copyPublicFile(path : *char, fileName : std::string_view) {
+    var adsTxtFileSrc = std::string(intrinsics::get_module_dir())
+    adsTxtFileSrc.append_view("/../public/")
+    adsTxtFileSrc.append_view(fileName)
+    var adsTxtFileDst = std::string(path)
+    adsTxtFileDst.append('/')
+    adsTxtFileDst.append_view(fileName)
+    fs::copy_file(adsTxtFileSrc.data(), adsTxtFileDst.data())
+}
+
 public func main(argc : int, argv : **char) : int {
 
     // creating the base directory
@@ -68,8 +78,16 @@ public func main(argc : int, argv : **char) : int {
     var outAssetsDir = std::string(path.data());
     outAssetsDir.append_char_ptr("/assets")
 
+    printf("Copying public files...\n");
+
+    // copying the ads.txt
+    copyPublicFile(path.data(), "ads.txt")
+    copyPublicFile(path.data(), "app-ads.txt")
+    copyPublicFile(path.data(), "sitemap.xml")
+
+    // copy assets
     printf("Copying assets...\n");
-    fs::copy_directory(srcAssetsDir.data(), outAssetsDir.data(), fs::CopyOptions.Recursive)
+    fs::copy_directory(srcAssetsDir.data(), outAssetsDir.data(), false)
 
     printf("Website generation complete!\n");
 
