@@ -56,11 +56,11 @@ public func SharedAppLayout(
         <div class="encapsulation">
             { WebAppBar(page) }
             <div class={mainContainerClass}>
-                <h1 class={heroTitleClass}>{ title }</h1>
-                <p class={heroSubtitleClass}>{ subtitle }</p>
+                <h1 class={heroTitleClass}>{ title.data() }</h1>
+                <p class={heroSubtitleClass}>{ subtitle.data() }</p>
                 if (!heroImage.empty()) {
                     <div class={heroImageContainerClass}>
-                        <img src={heroImage} alt="Hero" />
+                        <img src={heroImage.data()} alt="Hero" />
                     </div>
                 }
             </div>
@@ -101,10 +101,10 @@ public func AppDemoSection(page : &mut HtmlPage, title : std::string_view, descr
     #html {
         <section class={sectionClass}>
             <div class={textClass}>
-                <h2>{ title }</h2>
-                <p style="opacity: 0.8; line-height: 1.6;">{ description }</p>
+                <h2>{ title.data() }</h2>
+                <p style="opacity: 0.8; line-height: 1.6;">{ description.data() }</p>
             </div>
-            <img src={image} alt="Demo" class={imgClass} />
+            <img src={image.data()} alt="Demo" class={imgClass} />
         </section>
     }
 }
@@ -152,7 +152,7 @@ public func AppFeaturesRow(page : &mut HtmlPage) {
     }
 }
 
-public func AppAvailableLinks(page : &mut HtmlPage, webLink : std::string_view = "", playStoreLink : std::string_view = "", windowsLink : std::string_view = "", docsLink : std::string_view = "") {
+public func AppAvailableLinks(page : &mut HtmlPage, webLink : std::string_view, playStoreLink : std::string_view, windowsLink : std::string_view, docsLink : std::string_view) {
     var containerClass = #css {
         display: flex;
         flex-direction: column;
@@ -178,25 +178,25 @@ public func AppAvailableLinks(page : &mut HtmlPage, webLink : std::string_view =
         <div class={containerClass}>
             <span style="color: var(--primary-color); font-weight: 600; margin-bottom: 1em;">Available Now</span>
             if (!webLink.empty()) {
-                <a href={webLink} class={buttonClass} target="_blank">
+                <a href={webLink.data()} class={buttonClass} target="_blank">
                     { WorldWideWebIcon(page, "white") }
                     <span>Try on Web</span>
                 </a>
             }
             if (!playStoreLink.empty()) {
-                <a href={playStoreLink} class={buttonClass} target="_blank">
+                <a href={playStoreLink.data()} class={buttonClass} target="_blank">
                     { GooglePlayIcon(page, "white") }
                     <span>Download on Play Store</span>
                 </a>
             }
             if (!windowsLink.empty()) {
-                <a href={windowsLink} class={buttonClass} target="_blank">
+                <a href={windowsLink.data()} class={buttonClass} target="_blank">
                     { MicrosoftWindowsIcon(page, "white") }
                     <span>Download for Windows</span>
                 </a>
             }
             if (!docsLink.empty()) {
-                <a href={docsLink} style="margin-top: 1em; color: var(--text-color); opacity: 0.8;">Visit the docs</a>
+                <a href={docsLink.data()} style="margin-top: 1em; color: var(--text-color); opacity: 0.8;">Visit the docs</a>
             }
         </div>
     }

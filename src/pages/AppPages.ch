@@ -31,7 +31,7 @@ public func AppEasyToDoPage(page : &mut HtmlPage) {
         },
         (p : &mut HtmlPage) => { AppFeaturesRow(p) },
         (p : &mut HtmlPage) => {
-            AppAvailableLinks(p, "", "https://play.google.com/store/apps/details?id=com.wakaztahir.easytodo");
+            AppAvailableLinks(p, "", "https://play.google.com/store/apps/details?id=com.wakaztahir.easytodo", "", "");
         }
     )
 }
@@ -50,7 +50,7 @@ public func AppMindNodePage(page : &mut HtmlPage) {
         },
         (p : &mut HtmlPage) => { AppFeaturesRow(p) },
         (p : &mut HtmlPage) => {
-            AppAvailableLinks(p, "", "https://play.google.com/store/apps/details?id=com.wakaztahir.mindnode");
+            AppAvailableLinks(p, "", "https://play.google.com/store/apps/details?id=com.wakaztahir.mindnode", "", "");
         }
     )
 }
@@ -69,7 +69,7 @@ public func AppSketchablePage(page : &mut HtmlPage) {
         },
         (p : &mut HtmlPage) => { AppFeaturesRow(p) },
         (p : &mut HtmlPage) => {
-            AppAvailableLinks(p, "", "https://play.google.com/store/apps/details?id=com.wakaztahir.sketchapp");
+            AppAvailableLinks(p, "", "https://play.google.com/store/apps/details?id=com.wakaztahir.sketchapp", "", "");
         }
     )
 }
