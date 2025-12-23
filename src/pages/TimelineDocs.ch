@@ -59,6 +59,14 @@ public func TimelineDocsLayout(page : &mut HtmlPage, currentPath : std::string_v
     const sidebarLinkClassView = std::string_view(sidebarLinkClass)
 
     #html {
+        <head>
+            <title>Timeline Documentation | Qinetik</title>
+            <meta name="description" content="Timeline Documentation">
+            <link rel="icon" href="/assets/favicon.png" type="image/png">
+        </head>
+    }
+
+    #html {
         <div class={containerClass}>
             { WebAppBar(page) }
             <div class={mainContentClass}>
