@@ -281,9 +281,14 @@ public func AppFeaturesRow(page : &mut HtmlPage) {
     }
     
     var featuresGridClass = #css {
-        display: grid;
-        grid-template-columns: {"repeat(3, 1fr)"};
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
         gap: 2rem;
+        @media (min-width: 768px) {
+            flex-direction : row;
+        }
     }
     
     var featureCardClass = #css {
