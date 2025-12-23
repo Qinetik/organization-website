@@ -53,8 +53,8 @@ public func WebAppBar(page : &mut HtmlPage) {
     #html {
         <header class={appBarClass}>
             <a href="/" class={logoContainerClass}>
-                <div class={darkLogoClass}>{ QinetikLogoDark(page) }</div>
-                <div class={lightLogoClass}>{ QinetikLogoLight(page) }</div>
+                <div class={darkLogoClass}>{ QinetikLogoLight(page) }</div>
+                <div class={lightLogoClass}>{ QinetikLogoDark(page) }</div>
             </a>
             <div class={actionsClass}>
                 { ThemeSwitcher(page) }

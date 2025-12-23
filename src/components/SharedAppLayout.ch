@@ -336,7 +336,7 @@ public func AppFeaturesRow(page : &mut HtmlPage) {
                 <div class={featuresGridClass}>
                     <div class={featureCardClass}>
                         <div class={featureIconClass}>
-                            { ThemeLightDarkIcon(page) }
+                            { MoonIcon(page) }
                         </div>
                         <h3 class={featureTitleClass}>Light & Dark Mode</h3>
                         <p class={featureDescriptionClass}>
@@ -396,19 +396,19 @@ public func AppAvailableLinks(page : &mut HtmlPage, webLink : std::string_view, 
             <span style="color: var(--primary-color); font-weight: 600; margin-bottom: 1em;">Available Now</span>
             if (!webLink.empty()) {
                 <a href={webLink.data()} class={buttonClass} target="_blank">
-                    { WorldWideWebIcon(page, "white") }
+                    { WorldWideWebIcon(page) }
                     <span>Try on Web</span>
                 </a>
             }
             if (!playStoreLink.empty()) {
                 <a href={playStoreLink.data()} class={buttonClass} target="_blank">
-                    { GooglePlayIcon(page, "white") }
+                    { GooglePlayIcon(page) }
                     <span>Download on Play Store</span>
                 </a>
             }
             if (!windowsLink.empty()) {
                 <a href={windowsLink.data()} class={buttonClass} target="_blank">
-                    { MicrosoftWindowsIcon(page, "white") }
+                    { MicrosoftWindowsIcon(page) }
                     <span>Download for Windows</span>
                 </a>
             }
