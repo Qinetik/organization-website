@@ -103,6 +103,7 @@ public func MainPage(page : &mut HtmlPage) {
 
     var appCardsContainerClass = #css {
         display: grid;
+        grid-template-columns : {"repeat(2, 1fr)"};
         gap: 2em;
         margin-top: 2em;
         @media (min-width: 600px) { gap: 2em 4em; }
