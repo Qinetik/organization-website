@@ -36,22 +36,25 @@ public func WebAppBar(page : &mut HtmlPage) {
         gap: 1rem;
     }
 
+    var lightLogoClass = #css {
+        display : block;
+        .dark & {
+            display: none;
+        }
+    }
+
+    var darkLogoClass = #css {
+        display : none;
+        .dark & {
+            display: block;
+        }
+    }
+
     #html {
         <header class={appBarClass}>
             <a href="/" class={logoContainerClass}>
-                <img 
-                    src="/logo.svg" 
-                    alt="Qinetik Logo" 
-                    class={logoClass}
-                    style="display: var(--logo-light-display);"
-                />
-                <img 
-                    src="/logo-dark.svg" 
-                    alt="Qinetik Logo" 
-                    class={logoClass}
-                    style="display: var(--logo-dark-display);"
-                />
-                <span style="font-size: 1.5rem; font-weight: 600; color: var(--text-color);">Qinetik</span>
+                <div class={darkLogoClass}>{ QinetikLogoDark(page) }</div>
+                <div class={lightLogoClass}>{ QinetikLogoLight(page) }</div>
             </a>
             <div class={actionsClass}>
                 { ThemeSwitcher(page) }
